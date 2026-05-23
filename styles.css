@@ -1,0 +1,178 @@
+/* Micro-tag line under title */
+.projects-grid .card-tags {
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+/* Bottom CTA — match navbar bg-light exactly */
+.projects-grid .card-cta {
+  background-color: #f8f9fa; /* Bootstrap bg-light */
+  color: #333 !important;
+
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+
+  padding: 0.6rem 0.75rem;
+  font-size: 0.9rem;
+
+  border-top: 1px solid #d9d9d9;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+
+  margin-top: auto; /* pin CTA to bottom of flex card */
+}
+
+.projects-grid .card-cta:hover {
+  background-color: #eceff1; /* subtle darker hover */
+}
+
+/* Card styling + prevent ballooning (flex column layout) */
+.projects-grid .card {
+  overflow: hidden; /* keeps rounded corners continuous */
+  border: 1px solid #d9d9d9;
+  border-radius: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Ensure image is consistent + doesn't add inline spacing */
+.projects-grid .card-img-top {
+  width: 100%;
+  aspect-ratio: 2 / 1;  /* matches 900×450 */
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Allow body to expand; CTA stays pinned */
+.projects-grid .card-body {
+  flex: 1 1 auto;
+}
+
+/* Global link color: dark gray */
+a, a:visited, a:hover, a:active { color: #333; }
+
+/* Navbar link color */
+.navbar a { color: #333 !important; }
+
+/* Two-column layout on desktop/tablet (your existing approach) */
+.projects-grid .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.projects-grid .col-6 {
+  width: 50%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* MOBILE ONLY: collapse to 1 column cleanly (no squish, no negative-margin gutter hack) */
+@media (max-width: 767.98px) {
+  .projects-grid .col-6 {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .projects-grid .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Buttons (legacy—safe to keep if any remain elsewhere) */
+.btn-primary {
+  background-color: #333 !important;
+  border-color: #333 !important;
+  color: #fff !important;
+}
+.btn-primary:hover {
+  background-color: #1f1f1f !important;
+  border-color: #1f1f1f !important;
+}
+.btn-outline-dark {
+  border-color: #666 !important;
+  color: #333 !important;
+}
+.btn-outline-dark:hover { background-color: #eee !important; }
+
+/* PAGINATION — centered, smaller */
+.pagination-wrap {
+  width: 100%;
+  margin: 2rem 0 1rem 0;
+  text-align: center; /* fallback */
+}
+
+.pagination-wrap nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  width: fit-content;
+  margin: 0 auto !important;
+  font-size: 0.85rem;
+}
+
+/* Pagination — match ribbon gray */
+.pagination .page-link {
+  background-color: #f8f9fa; /* same as navbar + CTA */
+  color: #333;
+  border: 1px solid #d9d9d9;
+
+  padding: 0.2rem 0.55rem;
+  font-size: 0.85rem;
+}
+
+.pagination .page-link:hover {
+  background-color: #eceff1;
+  color: #111;
+}
+
+/* Active page */
+.pagination .page-item.active .page-link {
+  background-color: #e1e5ea;
+  border-color: #cfd4da;
+  color: #111;
+}
+
+/* Disabled */
+.pagination .page-item.disabled .page-link {
+  background-color: #f8f9fa;
+  color: #999;
+  border-color: #e0e0e0;
+}
+
+/* Title alignment + catalog scale */
+.quarto-title-block,
+.quarto-title-block .quarto-title,
+.quarto-title-block .quarto-title-banner {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.quarto-title-block h1.title,
+.quarto-title-block .title {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+/* Align title with first card column content */
+.quarto-title-block {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
